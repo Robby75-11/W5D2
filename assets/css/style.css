@@ -109,30 +109,28 @@ header {
           color: #333; /* Colore del testo */
           margin: 0; /* Rimuove il margine predefinito */
         } 
-        .icon-button {
-          position: fixed; /* Fissa la posizione del pulsante */
-          bottom: 20px; /* Distanza dal fondo della pagina */
-          right: 20px;  /* Distanza dal bordo destro della pagina */
-          background-color: transparent; /* Sfondo trasparente */
-          border: 2px solid violet;  /* Bordo viola intorno al pulsante */
-          
-          padding: 5px;  /* Spaziatura interna per l'icona */
-          font-size: 2px;  /* Dimensione dell'icona */
-          color: violet;  /* Colore dell'icona */
-          cursor: pointer;  /* Cambia il cursore su hover */
-          transition: all 0.3s ease; /* Aggiunge una transizione dolce */
-        }
+        .scroll-container {
+          position: fixed;
+          bottom: 20px;
+          right: 20px;
+         
+      }
+      
+      .scroll-button {
+          background-color: violet;
+          color: white;
+          border: none;
+          padding: 10px;
+          font-size: 10px;
+          cursor: pointer;
+          box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+      }
+      
+      .scroll-button:hover {
+          background-color: darkviolet;
+      }
+       
         
-        /* Effetto hover per il pulsante */
-        .icon-button:hover {
-          background-color: violet;  /* Cambia lo sfondo quando l'utente passa sopra */
-          color: white;  /* Cambia il colore dell'icona quando l'utente passa sopra */
-        }
-               
-        
-        
-        
-
   header .brand {
     width: 75%;
   }
@@ -173,6 +171,19 @@ main {
   padding: 2em 1em;
   margin-bottom: 1.5em;
 }
+section h2{
+  width: 178px;
+  height:55px;
+  position: relative;
+    top: -44px;
+    right: -10px;
+    font-size: 1.8rem;
+aside{
+  float: right;
+}
+ 
+
+}
 @media screen and (min-width: 700px) {
   main {
     padding: 2em;
@@ -185,17 +196,102 @@ section {
   margin-bottom: 2em;
   position: relative;
 }
+aside{
+  float: right;
+}
 
 section h2 {
+  width: 178px;
+  height:55px;
+  position: relative;
+    top: -44px;
+    right: -10px;
   text-align: center;
   color: #333;
-  font-size: 1.4rem;
+  font-size: 1.8rem;
   margin-bottom: 1.7rem;
   font-weight: bold;
   background-color: #a3a3a3;
   padding: 0px 1em;
 }
+h1 span{
+  position: relative;
+  white-space: nowrap;
+   /* Spazio per la sottolineatura */
+}
 
+h1 img {
+  position: absolute;
+  left: 0%;
+  bottom: -15px; /* Regola la posizione */
+  width: 100%;
+   }
+   .top-icons {
+    position: fixed;
+    top: 10px; /* Distanza dal bordo superiore */
+    right: 10px; /* Distanza dal bordo destro */
+    display: flex;
+    flex-direction: column; /* Calendario sopra e + sotto */
+    align-items: flex-end;
+    gap: 10px; /* Spazio tra le icone */
+    background-color: transparent;
+  }
+      
+  /* Impostazioni per l'icona del + */
+  .plus-icon {
+    font-size: 15px;  /* Dimensione dell'icona */
+    padding: 5px;
+    border: 2px solid blue; /* Bordo blu intorno all'icona */
+    color:blue;
+    background-color: transparent;
+  }
+     /* Impostazioni per l'icona del calendario */
+  .calendario-icon {
+    font-size: 15px;  /* Dimensione dell'icona */
+    padding: 5px;
+    border: 2px solid blue; /* Bordo blu intorno all'icona */
+  color: blue; /* Colore dell'icona (blu) */
+  background-color: transparent;
+      } 
+      .badge-paragraph-container {
+        display: flex;
+        align-items: center; /* Allinea verticalmente al centro */
+        gap: 10px; /* Distanza tra il badge e il paragrafo */
+      }
+      
+      /* Badge come immagine */
+      .badge {
+        width: 30px;  /* Dimensione dell'immagine del badge */
+        height: 30px; /* Dimensione dell'immagine del badge */
+      }
+      
+      /* Paragrafo */
+      .paragraph {
+        font-size: 16px; /* Dimensione del testo */
+        color: #333; /* Colore del testo */
+        margin: 0; /* Rimuove il margine predefinito */
+      } 
+      .scroll-container {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+       
+    }
+    
+    .scroll-button {
+        background-color: violet;
+        color: white;
+        border: none;
+        padding: 10px;
+        font-size: 10px;
+        cursor: pointer;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    }
+    
+    .scroll-button:hover {
+        background-color: darkviolet;
+    }
+     
 /* ELEMENTI NEL MAIN - ARTICLE */
 
 h1 {
@@ -231,7 +327,34 @@ h1 + p {
     font-weight: 700;
   }
 }
-
+.top-icons {
+  position: fixed;
+  top:10px;
+   /* Distanza dal bordo superiore */
+  right: 10px; /* Distanza dal bordo destro */
+  display: flex;
+  flex-direction:column; /* Calendario sopra e + sotto */
+  align-items: flex-end;
+  gap: 10px; /* Spazio tra le icone */
+  background-color: transparent;
+}
+    
+/* Impostazioni per l'icona del + */
+.plus-icon {
+  font-size: 15px;  /* Dimensione dell'icona */
+  padding: 5px;
+  border: 2px solid blue; /* Bordo blu intorno all'icona */
+  color:blue;
+  background-color: transparent;
+}
+   /* Impostazioni per l'icona del calendario */
+.calendario-icon {
+  font-size: 15px;  /* Dimensione dell'icona */
+  padding: 5px;
+  border: 2px solid blue; /* Bordo blu intorno all'icona */
+color: blue; /* Colore dell'icona (blu) */
+background-color: transparent;
+    } 
 @media screen and (min-width: 500px) {
   h1 {
     font-size: 3rem;
